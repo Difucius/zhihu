@@ -4,7 +4,7 @@ import { LikeTwoTone, DislikeTwoTone, StarTwoTone } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
 
 const { Meta } = Card;
-const ReplyListItem = ({ _id, content }) => (
+const ReplyListItem = ({ _id, content, questionId }) => (
 
         <Card
             bordered={false}
@@ -17,7 +17,7 @@ const ReplyListItem = ({ _id, content }) => (
 
             }}
         >
-            <Link to={`/answer/${_id}`}>
+            <Link to={`/answer/${questionId}/reply/${_id}`}>
                 <CardContainer>
                     <Meta
                         description={content ? content : 'This is the content'}

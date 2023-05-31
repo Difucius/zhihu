@@ -4,7 +4,7 @@ import { LikeTwoTone, DislikeTwoTone, StarTwoTone } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
 
 const { Meta } = Card;
-const AnswerListItem = ({ _id, title, url, description }) => (
+const AnswerListItem = ({ _id, title, description }) => (
 
         <Card
             title={title}
