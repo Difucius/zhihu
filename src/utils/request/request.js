@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { message } from 'antd';
-import { selectCurrentUser } from '../../store/user/user.selector';
+import { store } from '../../store/store';
 // create an axios instance
 
 const service = axios.create({
@@ -13,12 +13,14 @@ const service = axios.create({
 service.interceptors.request.use(
     (config) => {
         // do something before request is sent
+        if (store.getState().user.currentUser) {
+            if (store.getState().user.currentUser.token) {
+                // let each request carry token
+                // ['X-Token'] is a custom headers key
+                // please modify it according to the actual situation
+                config.headers['token'] = store.getState().user.currentUser.token;
+            }
 
-        if (selectCurrentUser().token) {
-            // let each request carry token
-            // ['X-Token'] is a custom headers key
-            // please modify it according to the actual situation
-            config.headers['token'] = selectCurrentUser().token;
         }
         return config;
     },
