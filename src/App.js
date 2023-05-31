@@ -10,7 +10,7 @@ import { setCurrentUser } from './store/user/user.action';
 import { useDispatch } from 'react-redux';
 
 const App = () => {
-    const dispatch = useDispatch()
+    const dispatch = useDispatch();
     useEffect(() => {
         //dispatch(setCurrentUser())
     }, []);
@@ -20,7 +20,7 @@ const App = () => {
                 <Route path='/' element={<Navigation />}>
                     <Route index={true} element={<AnswerList />}></Route>
                     <Route path='/authentication' element={<Authentication />}></Route>
-                    <Route path='/answer' element={<Answer />}></Route>
+                    <Route path='/answer/:id' element={<Answer />}></Route>
                 </Route>
             </Routes>
         </div>

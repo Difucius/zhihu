@@ -1,13 +1,12 @@
-import { Card, Image, Button } from 'antd';
-import { CardContainer, FooterContainer } from './answerListItem.styles';
+import { Card, Button } from 'antd';
+import { CardContainer, FooterContainer } from './replyListItem.styles';
 import { LikeTwoTone, DislikeTwoTone, StarTwoTone } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
 
 const { Meta } = Card;
-const AnswerListItem = ({ _id, title, url, description }) => (
+const ReplyListItem = ({ _id, content }) => (
 
         <Card
-            title={title}
             bordered={false}
             style={{
                 width: 1200,
@@ -20,12 +19,8 @@ const AnswerListItem = ({ _id, title, url, description }) => (
         >
             <Link to={`/answer/${_id}`}>
                 <CardContainer>
-                    <Image
-                        width={200}
-                        src='https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png'
-                    />
                     <Meta
-                        description={description ? description : 'This is the description'}
+                        description={content ? content : 'This is the content'}
                     />
                 </CardContainer>
             </Link>
@@ -39,4 +34,4 @@ const AnswerListItem = ({ _id, title, url, description }) => (
 
     )
 ;
-export default AnswerListItem;
+export default ReplyListItem;

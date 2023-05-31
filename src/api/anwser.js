@@ -7,3 +7,17 @@ export function getAnswerListData(data) {
         params: data,
     });
 }
+
+export function getQuestionById(data) {
+    return request({
+        url: `/questions/${data}`,
+        method: 'get',
+    });
+}
+
+export function getReplyByQuestionId(data) {
+    return request({
+        url: `/questions/${data}/answers`,
+        method: 'get',
+    });
+}
