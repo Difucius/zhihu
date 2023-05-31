@@ -7,6 +7,7 @@ import { HeaderContainer } from './navigation.styles';
 import { useSelector } from 'react-redux';
 import { setCurrentUser } from '../../store/user/user.action';
 import { selectCurrentUser } from '../../store/user/user.selector';
+import { Link } from 'react-router-dom';
 
 const { Header, Footer, Content } = Layout;
 
@@ -38,7 +39,10 @@ const Navigation = () => {
                 <Header>
                     <HeaderContainer>
                         <Menu onClick={onClick} selectedKeys={[current]} mode='horizontal' items={items} theme='dark' />
-                        {currentUser ? <Avatar>{currentUser.username}</Avatar> : <Avatar>未登录</Avatar>}
+                        <Link to='/authentication'>
+                            <Avatar>{currentUser ? currentUser.username : '未登录'}</Avatar>
+                        </Link>
+
                     </HeaderContainer>
                 </Header>
                 <Content>
