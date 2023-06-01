@@ -25,8 +25,7 @@ const items = [
     },
 ];
 
-const url = 'https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg';
-
+const url = 'https://bpic.51yuansu.com/pic3/cover/01/69/80/595f67c2239cb_610.jpg';
 const Navigation = () => {
         const [current, setCurrent] = useState('mail');
         const currentUser = useSelector(selectCurrentUser);
@@ -40,7 +39,7 @@ const Navigation = () => {
                     <HeaderContainer>
                         <Menu onClick={onClick} selectedKeys={[current]} mode='horizontal' items={items} theme='dark' />
                         <Link to='/authentication'>
-                            <Avatar>{currentUser ? currentUser.username : '未登录'}</Avatar>
+                            <Avatar src={currentUser ? currentUser.avatar_url : url}></Avatar>
                         </Link>
 
                     </HeaderContainer>

@@ -3,11 +3,22 @@ import ReplyContent from '../../components/replyContent/answerContent.component'
 import { getCommentById, getReplyById } from '../../api/anwser';
 import { useState, useEffect, Fragment } from 'react';
 import { useParams } from 'react-router';
+import { deleteComment } from '../../api/anwser';
 
 const Reply = () => {
     const { answerId, replyId } = useParams();
     const [commentArr, setCommentArr] = useState([]);
     const [reply, setReply] = useState(null);
+
+    const deleteComment = async (commentId) => {
+        try {
+            await deleteComment(answerId, replyId, commentId);
+            const newArr = commentArr.filter((item) => item._id !== commentId);
+            setCommentArr(newArr);
+        } catch (e) {
+            console.log(e);
+        }
+    };
     useEffect(() => {
         const getComments = async () => {
             try {
@@ -32,7 +43,7 @@ const Reply = () => {
         <Fragment>
             {reply && <ReplyContent {...reply}></ReplyContent>}
             {commentArr && commentArr.map((item) => {
-                return <CommentItem key={item._id} {...item} />;
+                return <CommentItem key={item._id} {...item} deleteComment />;
             })}
         </Fragment>
     );

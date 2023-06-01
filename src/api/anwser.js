@@ -35,3 +35,10 @@ export function getReplyById(questionId, replyId) {
         method: 'get',
     });
 }
+
+export function deleteComment(questionId, replyId, commentId) {
+    return request({
+        url: `/questions/${questionId}/answers/${replyId}/comments/${commentId}`,
+        method: 'delete',
+    });
+}

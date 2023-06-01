@@ -9,4 +9,5 @@ const ReplyContent = ({ answerer, content, voteCount }) => (
         </Paragraph>
     </Typography>
 );
+
 export default ReplyContent;

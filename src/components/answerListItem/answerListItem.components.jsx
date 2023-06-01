@@ -1,13 +1,11 @@
-import { Card, Image, Button } from 'antd';
+import { Card, Image, Button, Divider, Typography, Avatar,Space  } from 'antd';
 import { CardContainer, FooterContainer } from './answerListItem.styles';
 import { LikeTwoTone, DislikeTwoTone, StarTwoTone } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
 
-const { Meta } = Card;
-const AnswerListItem = ({ _id, title, description }) => (
-
+const { Title, Paragraph, Text } = Typography;
+const AnswerListItem = ({ _id, title, description, questioner }) => (
         <Card
-            title={title}
             bordered={false}
             style={{
                 width: 1200,
@@ -20,23 +18,19 @@ const AnswerListItem = ({ _id, title, description }) => (
         >
             <Link to={`/answer/${_id}`}>
                 <CardContainer>
-                    <Image
-                        width={200}
-                        src='https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png'
-                    />
-                    <Meta
-                        description={description ? description : 'This is the description'}
-                    />
+                    <Typography>
+                        <Title>{title}</Title>
+                        <Divider />
+                        <Paragraph>{description ? description : 'This is the description'}</Paragraph>
+                    </Typography>
                 </CardContainer>
             </Link>
             <FooterContainer>
-                <Button icon={<LikeTwoTone />}>点赞</Button>
-                <Button icon={<DislikeTwoTone />} />
-                <Button shape='circle' icon={<StarTwoTone />} />
+                <Space size='small'>
+                <Avatar src={questioner.avatar_url}/><Text strong>{`${questioner.name}  提问`}</Text>
+                </Space>
             </FooterContainer>
-
         </Card>
-
     )
 ;
 export default AnswerListItem;
