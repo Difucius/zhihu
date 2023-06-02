@@ -6,13 +6,10 @@ import Navigation from './routes/navigation/navigation.component';
 import Authentication from './routes/authentication/authentication.component';
 import AnswerList from './routes/answerList/answerList.component';
 import Answer from './routes/answer/answer.component';
-<<<<<<< HEAD
 import User from './routes/user/user.component'
 import { setCurrentUser } from './store/user/user.action';
 import { useDispatch } from 'react-redux';
-=======
 import Reply from './routes/reply/reply.component';
->>>>>>> 87ddbe0a881fe82a7825ab24c1ccd8d9b1768c8e
 
 const App = () => {
     useEffect(() => {
@@ -25,11 +22,8 @@ const App = () => {
                     <Route index={true} element={<AnswerList />}></Route>
                     <Route path='/authentication' element={<Authentication />}></Route>
                     <Route path='/answer/:id' element={<Answer />}></Route>
-<<<<<<< HEAD
                     <Route path='/users/:id' element={<User />}></Route>
-=======
                     <Route path='/answer/:answerId/reply/:replyId' element={<Reply/>}></Route>
->>>>>>> 87ddbe0a881fe82a7825ab24c1ccd8d9b1768c8e
                 </Route>
             </Routes>
         </div>
