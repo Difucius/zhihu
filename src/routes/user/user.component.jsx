@@ -5,7 +5,9 @@ import { Avatar ,Collapse,Divider,Button} from 'antd';
 // import{CollapseStyle}from'./user.styles'
 import { useSelector } from 'react-redux';
 import { selectCurrentUser } from '../../store/user/user.selector';
+import { Link } from 'react-router-dom';
 const { Panel } = Collapse;
+
 
 
 export const User=()=>{
@@ -20,6 +22,8 @@ export const User=()=>{
     };
     getUserInfo();
   },[])
+  const str=currentUser?"visible":"hidden"
+  const strTwo=currentUser?'/changeInfo/'+currentUser._id:'/';
 
   return (
     <div >
@@ -37,9 +41,14 @@ export const User=()=>{
             <div>资料最近更新时间：{user.updatedAt?user.updatedAt.slice(0,10):"2000.01.01"}</div>
           </Panel>
         </Collapse>
-        <Button danger style={{margin:"10px 0 0 0",}}>修改信息</Button>
+
+        <Link to={strTwo}>
+          <Button danger style={{margin:"10px 0 0 0",visibility:str}}>修改信息</Button>
+        </Link>
         <Divider></Divider>
-        <Button type="primary">返回</Button>
+        <Link to='/'>
+          <Button type="primary">返回</Button>
+        </Link>
       {/* </CollapseStyle> */}
       
     </div>

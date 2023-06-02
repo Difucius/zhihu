@@ -8,6 +8,7 @@ import AnswerList from './routes/answerList/answerList.component';
 import Answer from './routes/answer/answer.component';
 import User from './routes/user/user.component'
 import Reply from './routes/reply/reply.component';
+import ChangeInfo from './routes/changeInfo/changeInfo.component'
 const App = () => {
     useEffect(() => {
     }, []);
@@ -19,6 +20,7 @@ const App = () => {
                     <Route path='/authentication' element={<Authentication />}></Route>
                     <Route path='/answer/:id' element={<Answer />}></Route>
                     <Route path='/users/:id' element={<User />}></Route>
+                    <Route path='/changeInfo/:id' element={<ChangeInfo/>}></Route>
                     <Route path='/answer/:answerId/reply/:replyId' element={<Reply/>}></Route>
                 </Route>
             </Routes>

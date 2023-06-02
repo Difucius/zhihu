@@ -33,12 +33,13 @@ const Navigation = () => {
             console.log('click ', e);
             setCurrent(e.key);
         };
+        const str=currentUser?'/users/'+currentUser._id:'/authentication';
         return (
             <Layout>
                 <Header>
                     <HeaderContainer>
                         <Menu onClick={onClick} selectedKeys={[current]} mode='horizontal' items={items} theme='dark' />
-                        <Link to='/authentication'>
+                        <Link to={str}>
                             <Avatar src={currentUser ? currentUser.avatar_url : url}></Avatar>
                         </Link>
 
