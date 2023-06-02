@@ -1,13 +1,19 @@
 import { Typography } from 'antd';
-
-const { Title, Paragraph, Text, Link } = Typography;
+import {AnswerContainer,FooterContainer} from './answerContent.styles';
+import AvatarAndName from '../avatarAndName/avatarAndName.component';
+const { Title, Paragraph } = Typography;
 
 const AnswerContent = ({ title, description, questioner }) => (
-    <Typography>
-        <Title>{title}</Title>
-        <Paragraph>
-            {description}
-        </Paragraph>
-    </Typography>
+    <AnswerContainer>
+        <Typography>
+            <Title>{title}</Title>
+            <Paragraph>
+                {description}
+            </Paragraph>
+        </Typography>
+        <FooterContainer>
+            <AvatarAndName questioner={questioner} msg='提问'/>
+        </FooterContainer>
+    </AnswerContainer>
 );
 export default AnswerContent;

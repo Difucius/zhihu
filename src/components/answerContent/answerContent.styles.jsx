@@ -1,9 +1,11 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-export const CardContainer = styled.div`
-  width: 100%;
+export const AnswerContainer = styled.div`
+  width: 90%;
+  margin: 20px  auto 40px auto;
   text-align: left;
 `
+
 export const FooterContainer = styled.div`
   display: flex;
   justify-content: right;

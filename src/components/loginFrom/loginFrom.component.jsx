@@ -2,23 +2,25 @@ import { Button, Checkbox, Form, Input } from 'antd';
 import { login } from '../../api/authentication';
 import { useDispatch } from 'react-redux';
 import { setCurrentUser } from '../../store/user/user.action';
-import { useNavigate } from "react-router-dom"
+import { useNavigate } from 'react-router-dom';
 
 const LoginFrom = () => {
     const dispatch = useDispatch();
-    const navigate = useNavigate()
+    const navigate = useNavigate();
     const onFinish = async (values) => {
         const { password, username } = values;
         try {
             const res = await login({ password: password, name: username });
-            const { token } = res;
+            const { token, _id, avatar_url } = res;
             localStorage.setItem('token', JSON.stringify(token));
             const user = {
                 token,
                 username,
+                _id,
+                avatar_url
             };
             dispatch(setCurrentUser(user));
-            navigate('/')
+            navigate('/');
         } catch (error) {
             console.log('111');
             console.log(error);

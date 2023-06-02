@@ -7,6 +7,7 @@ import { HeaderContainer } from './navigation.styles';
 import { useSelector } from 'react-redux';
 import { setCurrentUser } from '../../store/user/user.action';
 import { selectCurrentUser } from '../../store/user/user.selector';
+import { Link } from 'react-router-dom';
 
 const { Header, Footer, Content } = Layout;
 
@@ -24,8 +25,7 @@ const items = [
     },
 ];
 
-const url = 'https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg';
-
+const url = 'https://bpic.51yuansu.com/pic3/cover/01/69/80/595f67c2239cb_610.jpg';
 const Navigation = () => {
         const [current, setCurrent] = useState('mail');
         const currentUser = useSelector(selectCurrentUser);
@@ -38,7 +38,10 @@ const Navigation = () => {
                 <Header>
                     <HeaderContainer>
                         <Menu onClick={onClick} selectedKeys={[current]} mode='horizontal' items={items} theme='dark' />
-                        {currentUser ? <Avatar>{currentUser.username}</Avatar> : <Avatar>未登录</Avatar>}
+                        <Link to='/authentication'>
+                            <Avatar src={currentUser ? currentUser.avatar_url : url}></Avatar>
+                        </Link>
+
                     </HeaderContainer>
                 </Header>
                 <Content>
