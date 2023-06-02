@@ -6,6 +6,7 @@ import Navigation from './routes/navigation/navigation.component';
 import Authentication from './routes/authentication/authentication.component';
 import AnswerList from './routes/answerList/answerList.component';
 import Answer from './routes/answer/answer.component';
+import User from './routes/user/user.component'
 import { setCurrentUser } from './store/user/user.action';
 import { useDispatch } from 'react-redux';
 
@@ -21,6 +22,7 @@ const App = () => {
                     <Route index={true} element={<AnswerList />}></Route>
                     <Route path='/authentication' element={<Authentication />}></Route>
                     <Route path='/answer/:id' element={<Answer />}></Route>
+                    <Route path='/users/:id' element={<User />}></Route>
                 </Route>
             </Routes>
         </div>
