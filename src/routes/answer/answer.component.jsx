@@ -25,7 +25,7 @@ export const Answer = () => {
     return (
         <Fragment>
             {
-                question && <AnswerContent title={question.title} description={question.description} />
+                question && <AnswerContent title={question.title} description={question.description} questioner={question.questioner}/>
             }
             {
                 replyArr.length !== 0 && replyArr.map((item) => {

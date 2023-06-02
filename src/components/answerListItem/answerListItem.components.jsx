@@ -1,7 +1,7 @@
-import { Card, Image, Button, Divider, Typography, Avatar,Space  } from 'antd';
+import { Card, Divider, Typography } from 'antd';
 import { CardContainer, FooterContainer } from './answerListItem.styles';
-import { LikeTwoTone, DislikeTwoTone, StarTwoTone } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
+import AvatarAndName from '../avatarAndName/avatarAndName.component'
 
 const { Title, Paragraph, Text } = Typography;
 const AnswerListItem = ({ _id, title, description, questioner }) => (
@@ -26,9 +26,7 @@ const AnswerListItem = ({ _id, title, description, questioner }) => (
                 </CardContainer>
             </Link>
             <FooterContainer>
-                <Space size='small'>
-                <Avatar src={questioner.avatar_url}/><Text strong>{`${questioner.name}  提问`}</Text>
-                </Space>
+               <AvatarAndName questioner={questioner} msg='提问'/>
             </FooterContainer>
         </Card>
     )
