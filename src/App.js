@@ -7,13 +7,9 @@ import Authentication from './routes/authentication/authentication.component';
 import AnswerList from './routes/answerList/answerList.component';
 import Answer from './routes/answer/answer.component';
 import User from './routes/user/user.component'
-import { setCurrentUser } from './store/user/user.action';
-import { useDispatch } from 'react-redux';
 import Reply from './routes/reply/reply.component';
-
 const App = () => {
     useEffect(() => {
-        //dispatch(setCurrentUser())
     }, []);
     return (
         <div className='App'>

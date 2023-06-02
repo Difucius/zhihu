@@ -29,7 +29,6 @@ const AnswerList = () => {
                 return <AnswerListItem {...item} />;
             })
             }
-
         </ListContainer>
     );
 
