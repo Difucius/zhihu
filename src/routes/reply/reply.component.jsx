@@ -1,13 +1,15 @@
 import CommentItem from '../../components/commentItem/commentItem.component';
-import ReplyContent from '../../components/replyContent/answerContent.component';
-import { getCommentById, getReplyById } from '../../api/anwser';
+import ReplyContent from '../../components/replyContent/replyContent.component';
+import { getCommentById, getQuestionById, getReplyById } from '../../api/anwser';
 import { useState, useEffect, Fragment } from 'react';
 import { useParams } from 'react-router';
+import {Divider} from 'antd';
 import { deleteComment } from '../../api/anwser';
 
 const Reply = () => {
     const { answerId, replyId } = useParams();
     const [commentArr, setCommentArr] = useState([]);
+    const [answer, setAnswer] = useState({});
     const [reply, setReply] = useState(null);
 
     const deleteComment = async (commentId) => {
@@ -24,6 +26,8 @@ const Reply = () => {
             try {
                 const commentArr = await getCommentById(answerId, replyId);
                 setCommentArr(commentArr);
+                const answer = await getQuestionById(answerId)
+                setAnswer(answer)
             } catch (e) {
                 console.log(e);
             }
@@ -39,9 +43,12 @@ const Reply = () => {
         getReply();
         getComments();
     }, []);
+
+
     return (
         <Fragment>
-            {reply && <ReplyContent {...reply}></ReplyContent>}
+            {reply && <ReplyContent {...reply} answer={answer}></ReplyContent>}
+            <Divider/>
             {commentArr && commentArr.map((item) => {
                 return <CommentItem key={item._id} {...item} deleteComment />;
             })}

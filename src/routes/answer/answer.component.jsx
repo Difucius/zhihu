@@ -3,6 +3,7 @@ import { useParams } from 'react-router';
 import { getQuestionById, getReplyByQuestionId } from '../../api/anwser';
 import { useEffect, useState, Fragment } from 'react';
 import ReplyListItem from '../../components/replyListItem/reply.component';
+import { Divider } from 'antd';
 
 
 export const Answer = () => {
@@ -27,6 +28,7 @@ export const Answer = () => {
             {
                 question && <AnswerContent title={question.title} description={question.description} questioner={question.questioner}/>
             }
+            <Divider/>
             {
                 replyArr.length !== 0 && replyArr.map((item) => {
                     return <ReplyListItem key={item._id} {...item} />;
