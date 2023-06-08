@@ -13,16 +13,16 @@ const { Header, Footer, Content } = Layout;
 
 
 const items = [
-    {
-        label: 'Navigation One',
-        key: 'mail',
-        icon: <MailOutlined />,
-    },
-    {
-        label: 'Navigation Two',
-        key: 'app',
-        icon: <AppstoreOutlined />,
-    },
+    // {
+    //     label: 'Navigation One',
+    //     key: 'mail',
+    //     icon: <MailOutlined />,
+    // },
+    // {
+    //     label: 'Navigation Two',
+    //     key: 'app',
+    //     icon: <AppstoreOutlined />,
+    // },
 ];
 
 const url = 'https://bpic.51yuansu.com/pic3/cover/01/69/80/595f67c2239cb_610.jpg';
@@ -42,7 +42,6 @@ const Navigation = () => {
                         <Link to={str}>
                             <Avatar src={currentUser ? currentUser.avatar_url : url}></Avatar>
                         </Link>
-
                     </HeaderContainer>
                 </Header>
                 <Content>

@@ -6,3 +6,10 @@ export const ListContainer = styled.div`
   flex-wrap:wrap;
   justify-content: center;
 `
+
+export const ButtonContainer=styled.div`
+  position: fixed;
+  right: 20px;
+  bottom: 40px;
+`
+

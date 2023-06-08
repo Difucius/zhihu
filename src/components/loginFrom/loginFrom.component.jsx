@@ -1,8 +1,9 @@
 import { Button, Checkbox, Form, Input } from 'antd';
 import { login } from '../../api/authentication';
 import { useDispatch } from 'react-redux';
-import { setCurrentUser } from '../../store/user/user.action';
+import { setCurrentUser,setDislikeARR,setLikesArr } from '../../store/user/user.action';
 import { useNavigate } from 'react-router-dom';
+import { getDislikesArr, getLikesArr } from '../../api/user';
 
 const LoginFrom = () => {
     const dispatch = useDispatch();
@@ -17,10 +18,17 @@ const LoginFrom = () => {
                 token,
                 username,
                 _id,
-                avatar_url
+                avatar_url,
             };
             dispatch(setCurrentUser(user));
+            const likesArr = await getLikesArr(_id);
+            const dislikesArr = await getDislikesArr(_id);
+            dispatch(setLikesArr(likesArr))
+            dispatch(setDislikeARR(dislikesArr))
             navigate('/');
+
+
+
         } catch (error) {
             console.log('111');
             console.log(error);

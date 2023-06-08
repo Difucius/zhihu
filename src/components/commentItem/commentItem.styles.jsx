@@ -15,7 +15,6 @@ export const AvatarContainer = styled.div`
 `
 
 export const ButtonContainer = styled.div`
-  width: 100%;
   display: flex;
   margin-top: 20px;
   Button{
@@ -28,4 +27,10 @@ export const FooterContainer = styled.div`
   display: flex;
   justify-content: space-between;
 
+`
+
+export const ChildrenContainer = styled.div`
+  width: 95%;
+  margin-left: 5%;
+  text-align: left;
 `

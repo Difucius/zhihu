@@ -36,9 +36,60 @@ export function getReplyById(questionId, replyId) {
     });
 }
 
-export function deleteComment(questionId, replyId, commentId) {
+export function deleteCommentById(questionId, replyId, commentId) {
     return request({
         url: `/questions/${questionId}/answers/${replyId}/comments/${commentId}`,
         method: 'delete',
     });
 }
+
+
+export function createQuestion(data) {
+    return request({
+        url: `/questions`,
+        method: 'post',
+        data,
+    });
+}
+
+export function createReply(questionId, data) {
+    return request({
+        url: `/questions/${questionId}/answers`,
+        method: 'post',
+        data,
+    });
+}
+
+export function createComment(questionId, replyId, data) {
+    return request({
+        url: `/questions/${questionId}/answers/${replyId}/comments`,
+        method: 'post',
+        data,
+    });
+}
+
+export function changeComment(questionId, replyId, commentId, data) {
+    return request({
+        url: `/questions/${questionId}/answers/${replyId}/comments/${commentId}`,
+        method: 'patch',
+        data,
+    });
+}
+
+export function changeReplayById(questionId, replyId, data) {
+    return request({
+        url: `/questions/${questionId}/answers/${replyId}`,
+        method: 'patch',
+        data,
+    });
+}
+
+export function deleteReplayById(questionId, replyId) {
+    return request({
+        url: `/questions/${questionId}/answers/${replyId}`,
+        method: 'delete',
+    });
+}
+
+
+

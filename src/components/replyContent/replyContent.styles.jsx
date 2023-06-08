@@ -8,7 +8,7 @@ export const ReplyContainer = styled.div`
 
 export const FooterContainer = styled.div`
   display: flex;
-  justify-content: right;
+  justify-content: space-between;
   width: 100%;
   margin-top: 20px;
 `

@@ -7,3 +7,10 @@ export function login(data) {
         data,
     });
 }
+export function signUp(data) {
+    return request({
+        url: `/users/`,
+        method: 'post',
+        data
+    });
+}

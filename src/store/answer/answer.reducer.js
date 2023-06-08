@@ -12,7 +12,11 @@ export const answerReducer = (state = INITIAL_STATE, action) => {
                 ...state,
                 answers: payload,
             };
-
+        case ANSWER_ACTION_TYPES.ADD_ANSWER:
+            return {
+                ...state,
+                answers: payload,
+            };
         default:
             return state;
     }

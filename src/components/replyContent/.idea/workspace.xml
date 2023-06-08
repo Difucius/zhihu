@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="83b45501-3b40-4918-8b90-e584685ccac6" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/../../routes/reply/reply.styles.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../utils/dataStructerHelper/comment.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../utils/dataStructerHelper/like.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../api/anwser.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../api/anwser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../api/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../api/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../commentItem/commentItem.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../commentItem/commentItem.component.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../commentItem/commentItem.styles.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../commentItem/commentItem.styles.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../loginFrom/loginFrom.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../loginFrom/loginFrom.component.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/replyContent.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/replyContent.component.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/replyContent.styles.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/replyContent.styles.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../replyListItem/reply.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../replyListItem/reply.component.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../routes/answer/answer.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../routes/answer/answer.component.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../routes/answer/answer.styles.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../routes/answer/answer.styles.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../routes/answerList/answerList.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../routes/answerList/answerList.component.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../routes/answerList/answerList.styles.styles.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../routes/answerList/answerList.styles.styles.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../routes/reply/reply.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../routes/reply/reply.component.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../store/answer/answer.action.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../store/answer/answer.action.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../store/answer/answer.reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../store/answer/answer.reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../store/answer/answer.types.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../store/answer/answer.types.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../store/user/user.action.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../store/user/user.action.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../store/user/user.reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../store/user/user.reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../store/user/user.selector.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../store/user/user.selector.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../store/user/user.types.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../store/user/user.types.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../utils/request/request.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../utils/request/request.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="2QrHvNM772o3HBblPLvbTJG6jEk" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Web/zhihu/src/components/replyContent",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="83b45501-3b40-4918-8b90-e584685ccac6" name="更改" comment="" />
+      <created>1686105009735</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1686105009735</updated>
+      <workItem from="1686105010746" duration="4000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

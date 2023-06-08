@@ -1,4 +1,6 @@
 export const USER_ACTION_TYPES = {
     SET_CURRENT_USER: 'user/SET_CURRENT_USER',
+    SET_LIKES: 'user/SET_LIKES',
+    SET_DISLIKES: 'user/SET_DISLIKES',
 };
 
